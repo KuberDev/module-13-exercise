@@ -23,7 +23,7 @@ spec:
           - name: Mongo__Password
             value: mongopwd
           - name: Mongo__Host
-            value: mongodb-service
+            value: mongodb-service.db.svc.cluster.local
           - name: Mongo__DataBase
             value: admin
 
