@@ -15,6 +15,16 @@ Edit api.yaml Mongo__Host value service to:
 > *mongodb-service*.*db*.**svc.cluster.local**
 (<*service_name*>.<*namespace*>.svc.cluster.local)
 
+## Config Map
+(Attention!: We can't use configmaps in different namespaces!)
+
+> `kubectl apply -f ./k8s/mongodb-configmap.yaml -n db`
+> `kubectl apply -f ./k8s/api-configmap.yaml -n api`
+
+> `kubectl get configmap`
+> `describe configmap mongo-configmap`
+> `describe configmap api-configmap`
+
 # Pods
 Create mongodb pod & Create mongodb Service
 > `kubectl apply -f ./k8s/mongo.yaml`
