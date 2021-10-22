@@ -17,21 +17,17 @@ Edit api.yaml Mongo__Host value service to:
 
 # Pods
 Create mongodb pod & Create mongodb Service
-> `kubectl apply -f ./k8s/mongo.yaml`
-> with namespace: `kubectl apply -f ./k8s/mongo.yaml -n db`
+> `kubectl apply -f ./k8s/mongo/mongo.yaml -n db`
 (check in: `kubectl get pods`)
 
 
 
 Create api pod & Create api Service
-> `kubectl apply -f ./k8s/api.yaml`
-> with namespace: `kubectl apply -f ./k8s/api.yaml -n api`
+> `kubectl apply -f ./k8s/api/api.yaml -n api`
 (check in: `kubectl get pods`)
 
 
 After all of them are ready go to http://localhost/swagger
-
-
 
 ## Commands
 kubectl get pods
